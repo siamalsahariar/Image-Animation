@@ -1,0 +1,50 @@
+:roor{
+    
+    --i: url(https://picsum.photos/id/56/250/250);
+    --s: 200px;
+}
+
+img{
+    --s: 200px;
+    width: 200px;
+    height: 200px;
+    box-sizing: border-box;
+    object-fit: cover;
+    background: var(--i) 50%/cover #000000;
+    background-blend-mode: luminosity;
+    transition: .5s;
+    cursor: pointer;
+}
+
+img.left {
+    object-position: right;
+    padding-left: var(--s);
+}
+
+img.right {
+    object-position: left;
+    padding-right: var(--s);
+}
+
+img.top {
+    object-position: bottom;
+    padding-top: var(--s);
+}
+img.bottom {
+    object-position: top;
+    padding-bottom: var(--s);
+}
+  
+img:hover {
+    padding: 0;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: auto auto;
+    place-content: center;
+    gap: 30px;
+    background: #C6A49A;
+  }
